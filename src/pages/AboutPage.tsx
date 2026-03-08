@@ -175,7 +175,7 @@ const AboutPage = () => {
               <div className="relative h-[600px] w-full bg-muted overflow-hidden">
                 <iframe
                   title="Khajani Welfare Society - Mathura HQ"
-                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=64/128+Gali+Sales+Tax,+Dampier+Nagar,+Mathura+281001,+Uttar+Pradesh,+India&zoom=17"
+                  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=Khajani+Welfare+Society,+Gali+Sales+Tax,+Dampier+Nagar,+Mathura,+Uttar+Pradesh&zoom=17"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
