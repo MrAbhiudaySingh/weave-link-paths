@@ -48,7 +48,7 @@ const AboutPage = () => {
                 </Reveal>
                 <Reveal variant="fade-up" delay={150} className="flex flex-col justify-center">
                   <p className="text-lg text-foreground leading-relaxed drop-cap font-serif">
-                    We envision a society where traditional artisans command global respect, where rural youth lead innovation, and where every woman has the economic independence to shape her own future. Our goal is not just charity, but the construction of self-sustaining ecosystems of growth.
+                    Khajani Welfare Society was established in 2007 by Dr. H.M. Maheshwari and registered under the Society Registration Act 1860. Beginning with certificate courses in Computers, Beauty & Wellness, and Dress Designing, the institute enrolled 246 students in its first year. Today, over 18,000 women have completed skill training and become self-reliant. With a network spanning 152 villages, the organization has impacted the lives of 50,000 families.
                   </p>
                   <div className="mt-8 pt-8 border-t border-border">
                     <h4 className="font-display text-2xl text-primary font-bold mb-3">Core Values</h4>
