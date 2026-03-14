@@ -139,8 +139,8 @@ const AboutPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   { name: "Mrs. Abha Maheshwari", role: "President", desc: "A lawyer and social reformer with 45 years of experience in empowering women and providing skill training.", img: "/images/about/team-leadership.jpg" },
-                  { name: "Mrs. Shipra Rathi", role: "Secretary", desc: "Known as 'Rozgaar Didi', 22+ years of experience in vocational and educational training. Gold medalist in M.A. Sociology.", img: "/images/about/hero-women-training.jpg" },
-                  { name: "Dr. Hari Mohan Maheshwari", role: "Chairman, Advisory Board", desc: "Retired Chief Veterinary Officer with 50 years of experience in public service.", img: "/images/about/accomplishments.jpg" },
+                  { name: "Mrs. Shipra Rathi", role: "Founder & Secretary", desc: "Known as 'Rozgaar Didi', 22+ years in vocational training. Gold medalist in M.A. Sociology and advanced diploma in Fashion Designing.", img: "/images/about/hero-women-training.jpg" },
+                  { name: "Dr. Hari Mohan Maheshwari", role: "Chairman, Advisory Board", desc: "Retired Chief Veterinary Officer in U.P. Government with 50 years of experience in public service.", img: "/images/about/accomplishments.jpg" },
                 ].map((person, i) => (
                   <Reveal key={person.name} variant="fade-up" delay={i * 150}>
                     <div className="text-center group">

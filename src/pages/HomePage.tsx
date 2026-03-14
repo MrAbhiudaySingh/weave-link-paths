@@ -71,9 +71,24 @@ const HomePage = () => {
         <section className="py-12 bg-card border-y border-border">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h3 className="text-center text-muted-foreground text-[10px] font-bold uppercase tracking-[0.2em] mb-8">Trusted Partners & Supporters</h3>
-            <div className="flex flex-wrap justify-center gap-12 md:gap-24 items-center opacity-40 hover:opacity-100 transition duration-500">
-              {["UPSDM", "MSME", "SIDBI", "NSDC"].map((name) => (
-                <span key={name} className="font-display font-bold text-2xl md:text-3xl text-primary tracking-wide">{name}</span>
+            <div className="flex flex-wrap justify-center gap-8 md:gap-12 items-center">
+              {[
+                { name: "UPSDM", type: "text" },
+                { name: "MSME", type: "text" },
+                { name: "NSDC", type: "text" },
+                { name: "SIDBI", type: "text" },
+                { name: "Johnson Tiles", src: "/images/partners/johnson-tiles.jpg" },
+                { name: "Supreme", src: "/images/partners/supreme.jpg" },
+                { name: "Daksh Educations", src: "/images/partners/daksh-educations.jpg" },
+                { name: "Hindustan Composites", src: "/images/partners/hindustan-composites.jpg" },
+              ].map((partner) => (
+                <div key={partner.name} className="grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all duration-500">
+                  {partner.type === "text" ? (
+                    <span className="font-display font-bold text-2xl md:text-3xl text-primary tracking-wide">{partner.name}</span>
+                  ) : (
+                    <img src={partner.src} alt={partner.name} className="h-10 md:h-14 object-contain" />
+                  )}
+                </div>
               ))}
             </div>
           </div>
