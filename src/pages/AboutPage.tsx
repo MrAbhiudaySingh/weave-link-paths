@@ -81,7 +81,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="fade-up">
             <div className="text-center mb-24 max-w-3xl mx-auto">
-              <h2 className="text-5xl md:text-7xl font-display font-medium text-primary mb-6">17 Years of Impact</h2>
+              <h2 className="text-5xl md:text-7xl font-display font-medium text-primary mb-6">18+ Years of Impact</h2>
               <p className="text-muted-foreground italic font-serif text-xl">"A chronicle of change, a legacy of welfare."</p>
             </div>
           </Reveal>
