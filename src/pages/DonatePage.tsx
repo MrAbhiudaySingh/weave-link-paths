@@ -58,7 +58,7 @@ const DonatePage = () => {
                 <div className="text-center space-y-2">
                   <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">UPI ID</p>
                   <div className="flex items-center justify-center gap-2 bg-muted p-2 rounded border border-border cursor-pointer hover:bg-muted/70 transition-colors">
-                    <code className="text-sm font-mono font-bold text-primary">khajaniwelfare@upi</code>
+                    <code className="text-sm font-mono font-bold text-primary">q353936413@ybl</code>
                     <Copy className="text-muted-foreground" size={14} />
                   </div>
                   <p className="text-xs text-muted-foreground mt-4 italic">Accepts GPay, PhonePe, Paytm, BHIM</p>
