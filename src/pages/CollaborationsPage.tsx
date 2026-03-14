@@ -120,11 +120,34 @@ const CollaborationsPage = () => {
       <Reveal variant="fade">
         <section className="py-20 border-t border-border bg-card">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 className="text-xs font-bold text-muted-foreground tracking-[0.3em] uppercase mb-16">Institutional Partners</h3>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16">
-              {["UPSDM", "MSME", "WORLD BANK", "SIDBI", "NSDC"].map((p) => (
-                <div key={p} className="px-6 py-4 border border-border bg-background hover:border-accent hover:shadow-md transition-all duration-300 group">
-                  <span className="font-display font-bold text-xl md:text-2xl text-muted-foreground group-hover:text-primary transition-colors">{p}</span>
+            <h3 className="text-xs font-bold text-muted-foreground tracking-[0.3em] uppercase mb-16">Institutional & Industry Partners</h3>
+            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {[
+                { name: "UPSDM", type: "text" },
+                { name: "MSME", type: "text" },
+                { name: "WORLD BANK", type: "text" },
+                { name: "SIDBI", type: "text" },
+                { name: "NSDC", type: "text" },
+              ].map((p) => (
+                <div key={p.name} className="px-6 py-4 border border-border bg-background hover:border-accent hover:shadow-md transition-all duration-300 group">
+                  <span className="font-display font-bold text-xl md:text-2xl text-muted-foreground group-hover:text-primary transition-colors">{p.name}</span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-12 flex flex-wrap justify-center items-center gap-8 md:gap-12">
+              {[
+                { name: "Johnson Tiles", src: "/images/partners/johnson-tiles.jpg" },
+                { name: "Supreme", src: "/images/partners/supreme.jpg" },
+                { name: "Daksh Educations", src: "/images/partners/daksh-educations.jpg" },
+                { name: "Hindustan Composites", src: "/images/partners/hindustan-composites.jpg" },
+                { name: "Balrampur Chini Mills", type: "text" },
+              ].map((p) => (
+                <div key={p.name} className="px-6 py-4 border border-border bg-background hover:border-accent hover:shadow-md transition-all duration-300 grayscale hover:grayscale-0">
+                  {p.type === "text" ? (
+                    <span className="font-display font-bold text-xl md:text-2xl text-muted-foreground hover:text-primary transition-colors">{p.name}</span>
+                  ) : (
+                    <img src={p.src} alt={p.name} className="h-10 md:h-14 object-contain" />
+                  )}
                 </div>
               ))}
             </div>
