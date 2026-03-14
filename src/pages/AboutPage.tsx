@@ -89,10 +89,10 @@ const AboutPage = () => {
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border hidden md:block"></div>
             <div className="space-y-24">
               {[
-                { year: "2006", title: "The Foundation", desc: "Khajani Welfare Society is registered in Mathura with a focus on basic literacy and hygiene for rural families.", side: "left" },
-                { year: "2010", title: "Vocational Expansion", desc: "Launch of the first dedicated Sewing & Tailoring center. 500 women trained in the first year.", side: "right" },
-                { year: "2015", title: "UPSDM Partnership", desc: "Became an official training partner for Uttar Pradesh Skill Development Mission, scaling operations to 5 districts.", side: "left" },
-                { year: "2023", title: "Global Recognition", desc: "Received ISO 9001:2015 certification and partnered with World Bank initiatives for pro-poor tourism.", side: "right" },
+                { year: "2007", title: "The Foundation", desc: "Khajani Welfare Society is registered in Mathura by Dr. H.M. Maheshwari with a focus on skill development and training for women.", side: "left" },
+                { year: "2012", title: "Scholarship Program", desc: "Launched a scholarship program to support economically challenged women. Student strength grew to 650 by 2019, with 500 on scholarships.", side: "right" },
+                { year: "2015", title: "UPSDM Partnership", desc: "Became an official training partner for Uttar Pradesh Skill Development Mission, scaling operations across districts.", side: "left" },
+                { year: "2020", title: "Pandemic Response", desc: "Rapidly set up online training. Students formed SHGs and manufactured cloth masks and PPE Kits, earning income during the crisis.", side: "right" },
               ].map((item, i) => (
                 <Reveal key={item.year} variant={item.side === "left" ? "fade-right" : "fade-left"} delay={i * 100}>
                   <div className="relative flex md:flex-row flex-col items-center justify-between group">
