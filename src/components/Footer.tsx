@@ -15,8 +15,8 @@ const Footer = () => {
             </p>
             <div className="pt-4 border-t border-primary-foreground/10">
               <p className="text-xs uppercase tracking-wide opacity-50">
-                123 Braj Vihar, Near ISKCON Temple,<br />
-                Mathura, Uttar Pradesh, India - 281001
+                64/128, Gali Sales Tax, Dampier Nagar,<br />
+                Mathura – 281001, Uttar Pradesh
               </p>
             </div>
           </div>
