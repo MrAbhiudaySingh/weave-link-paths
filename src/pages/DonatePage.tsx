@@ -52,12 +52,9 @@ const DonatePage = () => {
             <Reveal variant="fade-right" delay={200} className="w-full lg:w-1/2 flex flex-col items-center">
               <div className="bg-card p-8 rounded-2xl shadow-2xl border border-border max-w-sm w-full relative">
                 <div className="absolute -top-4 -right-4 bg-accent text-accent-foreground text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wide shadow-lg">Scan & Pay</div>
-                <div className="aspect-square bg-muted border-2 border-dashed border-border rounded-xl flex items-center justify-center mb-6 relative overflow-hidden group">
-                  <QrCode className="text-muted-foreground/30 group-hover:scale-110 transition-transform duration-500" size={120} />
-                  <div className="absolute inset-0 bg-primary/5 flex items-center justify-center">
-                    <p className="text-xs font-bold uppercase tracking-widest text-primary bg-card/80 px-4 py-2 rounded backdrop-blur-sm">Khajani Welfare Society</p>
-                  </div>
-                </div>
+                <div className="aspect-square bg-muted border-2 border-border rounded-xl flex items-center justify-center mb-6 relative overflow-hidden">
+                   <img src="/images/donate/upi-qr.jpg" alt="Khajani Welfare Society UPI QR Code" className="w-full h-full object-contain p-2" />
+                 </div>
                 <div className="text-center space-y-2">
                   <p className="text-xs font-bold uppercase tracking-widest text-muted-foreground">UPI ID</p>
                   <div className="flex items-center justify-center gap-2 bg-muted p-2 rounded border border-border cursor-pointer hover:bg-muted/70 transition-colors">
