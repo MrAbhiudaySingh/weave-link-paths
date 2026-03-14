@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <Reveal variant="fade-left" className="lg:col-span-7 space-y-8">
-              <span className="text-accent font-bold text-xs tracking-[0.2em] uppercase pl-1 border-l-2 border-accent">Special Edition - 2024</span>
+              <span className="text-accent font-bold text-xs tracking-[0.2em] uppercase pl-1 border-l-2 border-accent">Established 2007 • Mathura</span>
               <h1 className="text-6xl md:text-8xl font-display font-medium text-primary leading-[0.9] tracking-tight">
                 Rooted in <br /><span className="font-bold italic">Tradition,</span><br />
                 Driven by <span className="text-accent">Change.</span>
