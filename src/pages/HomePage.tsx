@@ -116,8 +116,8 @@ const HomePage = () => {
             {[
               { num: "152+", label: "Villages Served" },
               { num: "8K+", label: "Lives Touched Yearly" },
-              { num: "20K+", label: "Women Empowered" },
-              { num: "12+", label: "Years of Legacy" },
+              { num: "18K+", label: "Women Trained" },
+              { num: "18+", label: "Years of Legacy" },
             ].map((stat, i) => (
               <Reveal key={stat.label} variant="fade-up" delay={i * 100}>
                 <div className="text-center group">

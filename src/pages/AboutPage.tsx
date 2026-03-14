@@ -23,7 +23,7 @@ const AboutPage = () => {
               <div className="relative aspect-[4/5] overflow-hidden group">
                 <img alt="Khajani Welfare Society women training" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="/images/about/hero-women-training.jpg" />
                 <div className="absolute bottom-0 left-0 bg-card p-4 max-w-[80%] border-t-4 border-accent">
-                  <p className="font-display text-primary italic text-lg leading-tight">Since 2006, bridging rural potential and modern opportunity.</p>
+                  <p className="font-display text-primary italic text-lg leading-tight">Since 2007, bridging rural potential and modern opportunity.</p>
                 </div>
               </div>
             </Reveal>
