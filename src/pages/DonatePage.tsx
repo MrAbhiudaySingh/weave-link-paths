@@ -86,8 +86,9 @@ const DonatePage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {[
               { label: "Account Name", value: "Khajani Welfare Society", mono: false },
-              { label: "Account Number", value: "50200058291032", mono: true },
-              { label: "IFSC Code", value: "HDFC0001234", mono: true },
+              { label: "Bank", value: "Yes Bank, Dampier Nagar, Mathura", mono: false },
+              { label: "Account Number", value: "007294600000533", mono: true },
+              { label: "IFSC Code", value: "YESB0000072", mono: true },
             ].map((item, i) => (
               <Reveal key={item.label} variant="fade-up" delay={i * 100}>
                 <div className="p-8 border border-border text-center rounded-xl bg-muted">
