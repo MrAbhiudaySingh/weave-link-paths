@@ -10,7 +10,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             <Reveal variant="fade-left" className="lg:col-span-7 space-y-8">
-              <span className="text-accent font-bold text-xs tracking-[0.2em] uppercase pl-1 border-l-2 border-accent">Established 2007 • Mathura</span>
+              <span className="text-accent font-bold text-xs tracking-[0.2em] uppercase pl-1 border-l-2 border-accent">Special Edition - 2024</span>
               <h1 className="text-6xl md:text-8xl font-display font-medium text-primary leading-[0.9] tracking-tight">
                 Rooted in <br /><span className="font-bold italic">Tradition,</span><br />
                 Driven by <span className="text-accent">Change.</span>
@@ -23,7 +23,7 @@ const AboutPage = () => {
               <div className="relative aspect-[4/5] overflow-hidden group">
                 <img alt="Khajani Welfare Society women training" className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" src="/images/about/hero-women-training.jpg" />
                 <div className="absolute bottom-0 left-0 bg-card p-4 max-w-[80%] border-t-4 border-accent">
-                  <p className="font-display text-primary italic text-lg leading-tight">Since 2007, bridging rural potential and modern opportunity.</p>
+                  <p className="font-display text-primary italic text-lg leading-tight">Since 2006, bridging rural potential and modern opportunity.</p>
                 </div>
               </div>
             </Reveal>
@@ -48,7 +48,7 @@ const AboutPage = () => {
                 </Reveal>
                 <Reveal variant="fade-up" delay={150} className="flex flex-col justify-center">
                   <p className="text-lg text-foreground leading-relaxed drop-cap font-serif">
-                    Khajani Welfare Society was established in 2007 by Dr. H.M. Maheshwari and registered under the Society Registration Act 1860. Beginning with certificate courses in Computers, Beauty & Wellness, and Dress Designing, the institute enrolled 246 students in its first year. Today, over 18,000 women have completed skill training and become self-reliant. With a network spanning 152 villages, the organization has impacted the lives of 50,000 families.
+                    We envision a society where traditional artisans command global respect, where rural youth lead innovation, and where every woman has the economic independence to shape her own future. Our goal is not just charity, but the construction of self-sustaining ecosystems of growth.
                   </p>
                   <div className="mt-8 pt-8 border-t border-border">
                     <h4 className="font-display text-2xl text-primary font-bold mb-3">Core Values</h4>
@@ -81,7 +81,7 @@ const AboutPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal variant="fade-up">
             <div className="text-center mb-24 max-w-3xl mx-auto">
-              <h2 className="text-5xl md:text-7xl font-display font-medium text-primary mb-6">18+ Years of Impact</h2>
+              <h2 className="text-5xl md:text-7xl font-display font-medium text-primary mb-6">17 Years of Impact</h2>
               <p className="text-muted-foreground italic font-serif text-xl">"A chronicle of change, a legacy of welfare."</p>
             </div>
           </Reveal>
@@ -89,10 +89,10 @@ const AboutPage = () => {
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-px bg-border hidden md:block"></div>
             <div className="space-y-24">
               {[
-                { year: "2007", title: "The Foundation", desc: "Khajani Welfare Society is registered in Mathura by Dr. H.M. Maheshwari with a focus on skill development and training for women.", side: "left" },
-                { year: "2012", title: "Scholarship Program", desc: "Launched a scholarship program to support economically challenged women. Student strength grew to 650 by 2019, with 500 on scholarships.", side: "right" },
-                { year: "2015", title: "UPSDM Partnership", desc: "Became an official training partner for Uttar Pradesh Skill Development Mission, scaling operations across districts.", side: "left" },
-                { year: "2020", title: "Pandemic Response", desc: "Rapidly set up online training. Students formed SHGs and manufactured cloth masks and PPE Kits, earning income during the crisis.", side: "right" },
+                { year: "2006", title: "The Foundation", desc: "Khajani Welfare Society is registered in Mathura with a focus on basic literacy and hygiene for rural families.", side: "left" },
+                { year: "2010", title: "Vocational Expansion", desc: "Launch of the first dedicated Sewing & Tailoring center. 500 women trained in the first year.", side: "right" },
+                { year: "2015", title: "UPSDM Partnership", desc: "Became an official training partner for Uttar Pradesh Skill Development Mission, scaling operations to 5 districts.", side: "left" },
+                { year: "2023", title: "Global Recognition", desc: "Received ISO 9001:2015 certification and partnered with World Bank initiatives for pro-poor tourism.", side: "right" },
               ].map((item, i) => (
                 <Reveal key={item.year} variant={item.side === "left" ? "fade-right" : "fade-left"} delay={i * 100}>
                   <div className="relative flex md:flex-row flex-col items-center justify-between group">
@@ -139,8 +139,8 @@ const AboutPage = () => {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {[
                   { name: "Mrs. Abha Maheshwari", role: "President", desc: "A lawyer and social reformer with 45 years of experience in empowering women and providing skill training.", img: "/images/about/team-leadership.jpg" },
-                  { name: "Mrs. Shipra Rathi", role: "Founder & Secretary", desc: "Known as 'Rozgaar Didi', 22+ years in vocational training. Gold medalist in M.A. Sociology and advanced diploma in Fashion Designing.", img: "/images/about/hero-women-training.jpg" },
-                  { name: "Dr. Hari Mohan Maheshwari", role: "Chairman, Advisory Board", desc: "Retired Chief Veterinary Officer in U.P. Government with 50 years of experience in public service.", img: "/images/about/accomplishments.jpg" },
+                  { name: "Mrs. Shipra Rathi", role: "Secretary", desc: "Known as 'Rozgaar Didi', 22+ years of experience in vocational and educational training. Gold medalist in M.A. Sociology.", img: "/images/about/hero-women-training.jpg" },
+                  { name: "Dr. Hari Mohan Maheshwari", role: "Chairman, Advisory Board", desc: "Retired Chief Veterinary Officer with 50 years of experience in public service.", img: "/images/about/accomplishments.jpg" },
                 ].map((person, i) => (
                   <Reveal key={person.name} variant="fade-up" delay={i * 150}>
                     <div className="text-center group">
