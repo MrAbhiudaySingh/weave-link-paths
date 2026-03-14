@@ -83,7 +83,7 @@ const DonatePage = () => {
               <p className="mt-4 text-muted-foreground text-sm font-serif italic">For direct NEFT/RTGS transfers</p>
             </div>
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               { label: "Account Name", value: "Khajani Welfare Society", mono: false },
               { label: "Bank", value: "Yes Bank, Dampier Nagar, Mathura", mono: false },
