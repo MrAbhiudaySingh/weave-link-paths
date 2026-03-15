@@ -27,6 +27,7 @@ import MediaPage from "./pages/MediaPage";
 import CampaignsPage from "./pages/CampaignsPage";
 import CollaborationsPage from "./pages/CollaborationsPage";
 import DonatePage from "./pages/DonatePage";
+import VolunteerPage from "./pages/VolunteerPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
