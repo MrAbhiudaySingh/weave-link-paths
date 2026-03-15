@@ -115,25 +115,8 @@ const VolunteerPage = () => {
         </div>
       </section>
 
-      {/* Corporate Engagement */}
-      <section className="bg-primary text-primary-foreground py-24 px-6 md:px-12">
-        <Reveal variant="fade-up">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 font-display">Corporate Employee Engagement</h2>
-            <p className="text-xl text-primary-foreground/60 mb-10 leading-relaxed">
-              Elevate your CSR initiatives by engaging your workforce in meaningful on-ground projects. From skill-based volunteering to collective community building, we offer structured partnerships that align with your corporate values and UN Sustainable Development Goals.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <a href="#" className="border-2 border-primary-foreground px-8 py-3 font-semibold hover:bg-primary-foreground hover:text-primary transition-all uppercase tracking-wider text-sm">
-                Download CSR Brochure
-              </a>
-              <a href="/collaborations" className="bg-accent text-accent-foreground px-8 py-3 font-semibold hover:bg-accent/90 transition-all uppercase tracking-wider text-sm">
-                Partner with Us
-              </a>
-            </div>
-          </div>
-        </Reveal>
-      </section>
+
+
 
       {/* Application Form */}
       <section className="bg-background py-24 px-6 md:px-12" id="apply">
