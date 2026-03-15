@@ -101,16 +101,16 @@ const VolunteerPage = () => {
       <section className="bg-accent text-accent-foreground py-16 px-6 md:px-12">
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
           <Reveal variant="fade-up">
-            <p className="text-5xl md:text-6xl font-bold text-secondary font-display">500+</p>
-            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Active Volunteers</p>
+            <p className="text-5xl md:text-6xl font-bold text-secondary font-display">20K+</p>
+            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Women Empowered</p>
           </Reveal>
           <Reveal variant="fade-up" delay={100}>
-            <p className="text-5xl md:text-6xl font-bold font-display">152</p>
-            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Villages Impacted</p>
+            <p className="text-5xl md:text-6xl font-bold font-display">152+</p>
+            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Villages Served</p>
           </Reveal>
           <Reveal variant="fade-up" delay={200}>
-            <p className="text-5xl md:text-6xl font-bold text-secondary font-display">17</p>
-            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Years of Service</p>
+            <p className="text-5xl md:text-6xl font-bold text-secondary font-display">12+</p>
+            <p className="uppercase tracking-widest text-sm font-semibold opacity-90 mt-2">Years of Legacy</p>
           </Reveal>
         </div>
       </section>
