@@ -37,6 +37,40 @@ const ImpactStat = ({ value, label }: { value: string; label: string }) => (
   </div>
 );
 
+/* ── Photo Card with overlay ── */
+const PhotoCard = ({
+  img, title, desc, link, badge,
+}: {
+  img: string;
+  title: string;
+  desc: string;
+  link?: string;
+  badge?: string;
+}) => {
+  const content = (
+    <div className="group relative aspect-[4/3] overflow-hidden rounded-lg shadow-lg">
+      <img src={img} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+      <div className="absolute inset-0 bg-gradient-to-t from-primary/80 via-primary/30 to-transparent" />
+      {badge && (
+        <span className="absolute top-4 left-4 px-3 py-1 bg-accent text-accent-foreground text-[10px] font-bold uppercase tracking-widest rounded-full">
+          {badge}
+        </span>
+      )}
+      <div className="absolute bottom-4 left-4 right-4">
+        <h3 className="text-primary-foreground text-lg font-display font-bold leading-tight">{title}</h3>
+        <p className="text-primary-foreground/80 text-xs mt-1 leading-relaxed line-clamp-2">{desc}</p>
+        {link && (
+          <span className="inline-flex items-center text-accent text-xs font-bold uppercase tracking-widest mt-2 gap-1 group-hover:gap-2 transition-all">
+            Learn More <ArrowRight size={12} />
+          </span>
+        )}
+      </div>
+    </div>
+  );
+  if (link) return <Link to={link} className="block">{content}</Link>;
+  return content;
+};
+
 /* ── Mini Card ── */
 const MiniCard = ({
   icon: Icon, title, desc, link,
@@ -64,21 +98,27 @@ const ProjectsPage = () => {
   return (
     <Layout>
       {/* ── Hero ── */}
-      <section className="bg-background pt-20 pb-16 text-center">
-        <Reveal variant="fade-up" className="max-w-4xl mx-auto px-4">
-          <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
-            Since 2007 • Transforming Lives
-          </span>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-primary mb-2 leading-tight">
-            Our Programs <span className="font-serif italic">&</span>
-          </h1>
-          <h1 className="text-5xl md:text-7xl font-display font-bold text-accent italic leading-tight mb-6">
-            Initiatives
-          </h1>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto leading-relaxed">
-            Khajani Welfare Society has been working since 2007 to empower women and communities in the Braj region through skill development, education, health, cultural preservation, and community service.
-          </p>
-        </Reveal>
+      <section className="relative bg-primary overflow-hidden">
+        <div className="absolute inset-0 opacity-20">
+          <img src="/images/projects/brij-hunar-sewing-hall.jpg" alt="" className="w-full h-full object-cover" />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-primary/60 via-primary/80 to-primary" />
+        <div className="relative pt-24 pb-20 text-center">
+          <Reveal variant="fade-up" className="max-w-4xl mx-auto px-4">
+            <span className="text-accent text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
+              Since 2007 • Transforming Lives
+            </span>
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-primary-foreground mb-2 leading-tight">
+              Our Programs <span className="font-serif italic">&</span>
+            </h1>
+            <h1 className="text-5xl md:text-7xl font-display font-bold text-accent italic leading-tight mb-6">
+              Initiatives
+            </h1>
+            <p className="text-primary-foreground/80 text-lg max-w-2xl mx-auto leading-relaxed">
+              Khajani Welfare Society has been working since 2007 to empower women and communities in the Braj region through skill development, education, health, cultural preservation, and community service.
+            </p>
+          </Reveal>
+        </div>
       </section>
 
       {/* ── 1. Education ── */}
@@ -140,6 +180,15 @@ const ProjectsPage = () => {
           title="Women Skill Training & Livelihood Programs"
           description="Empowering girls and women from marginalized communities through vocational skill training — enabling employment, entrepreneurship, and financial independence."
         />
+        {/* Image strip */}
+        <Reveal variant="fade-up" className="mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            <PhotoCard img="/images/projects/brij-hunar-beauty.jpg" title="Beauty Therapy" desc="Professional beauty & salon training" link="/projects/brij-hunar" />
+            <PhotoCard img="/images/projects/brij-hunar-tailoring.jpg" title="Tailoring Program" desc="Self-employment through stitching" link="/projects/brij-hunar" />
+            <PhotoCard img="/images/projects/upsdm-beauty.jpg" title="UPSDM Beauty" desc="Government-certified courses" link="/projects/upsdm-training" />
+            <PhotoCard img="/images/projects/upsdm-tailor.jpg" title="UPSDM Tailoring" desc="Certified tailor training" link="/projects/upsdm-training" />
+          </div>
+        </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           <Reveal variant="fade-up">
             <MiniCard
@@ -190,31 +239,42 @@ const ProjectsPage = () => {
             title="Women Community Development"
             description="Building sustainable livelihoods and community-driven enterprises through organized women's groups."
           />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Reveal variant="fade-up">
-              <MiniCard
-                icon={Users}
-                title="Self Help Groups (SHGs)"
-                desc="10 active SHGs with 120 women — building savings, credit access, and micro-enterprise opportunities."
-                link="/projects/shg-federation"
-              />
-            </Reveal>
-            <Reveal variant="fade-up" delay={100}>
-              <MiniCard
-                icon={ShoppingBag}
-                title="Braj Surabhi Area Level Federation"
-                desc="Federation of SHGs promoting Braj art, craft, devotional products, and eco-friendly items through women-led enterprises."
-                link="/projects/brij-surabhi"
-              />
-            </Reveal>
-            <Reveal variant="fade-up" delay={200}>
-              <div className="flex flex-col gap-3 bg-accent/5 border-2 border-dashed border-accent/30 p-6 h-full rounded-sm">
-                <div className="flex items-center justify-between">
-                  <Rocket size={24} className="text-accent" />
-                  <span className="text-[10px] font-bold text-accent uppercase tracking-widest bg-accent/10 px-2 py-1 rounded-full">In Progress</span>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start mb-8">
+            <Reveal variant="fade-right">
+              <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+                <img src="/images/projects/shg-federation.jpg" alt="Self Help Groups" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/60 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <span className="text-accent text-xs font-bold tracking-widest uppercase">Community Power</span>
+                  <h3 className="text-primary-foreground text-2xl font-display font-bold mt-1">Self Help Group Federation</h3>
+                  <p className="text-primary-foreground/80 text-sm mt-1">10 active SHGs • 120 women</p>
                 </div>
-                <h3 className="text-base font-display font-bold text-primary">Brij Business Women's Directory</h3>
-                <p className="text-xs text-muted-foreground leading-relaxed">Digital directory connecting women entrepreneurs across Braj — promoting women-owned businesses and artisan markets.</p>
+              </div>
+            </Reveal>
+            <Reveal variant="fade-left" delay={100}>
+              <div className="flex flex-col gap-6">
+                <div className="grid grid-cols-1 gap-4">
+                  <MiniCard
+                    icon={Users}
+                    title="Self Help Groups (SHGs)"
+                    desc="10 active SHGs with 120 women — building savings, credit access, and micro-enterprise opportunities."
+                    link="/projects/shg-federation"
+                  />
+                  <MiniCard
+                    icon={ShoppingBag}
+                    title="Braj Surabhi Area Level Federation"
+                    desc="Federation of SHGs promoting Braj art, craft, devotional products, and eco-friendly items through women-led enterprises."
+                    link="/projects/brij-surabhi"
+                  />
+                </div>
+                <div className="flex flex-col gap-3 bg-accent/5 border-2 border-dashed border-accent/30 p-6 rounded-sm">
+                  <div className="flex items-center justify-between">
+                    <Rocket size={24} className="text-accent" />
+                    <span className="text-[10px] font-bold text-accent uppercase tracking-widest bg-accent/10 px-2 py-1 rounded-full">In Progress</span>
+                  </div>
+                  <h3 className="text-base font-display font-bold text-primary">Brij Business Women's Directory</h3>
+                  <p className="text-xs text-muted-foreground leading-relaxed">Digital directory connecting women entrepreneurs across Braj — promoting women-owned businesses and artisan markets.</p>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -231,19 +291,21 @@ const ProjectsPage = () => {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Reveal variant="fade-up">
-            <MiniCard
-              icon={Stethoscope}
+            <PhotoCard
+              img="/images/projects/sanitary-napkin-vending.jpg"
               title="Menstrual Hygiene Initiative"
-              desc="Health check-up camps, menstrual hygiene awareness sessions, sanitary product distribution, and vending machines across 152 villages."
+              desc="Health check-up camps, menstrual hygiene awareness, sanitary product distribution across 152 villages."
               link="/projects/sanitary-napkin"
+              badge="Brij-Sangini"
             />
           </Reveal>
           <Reveal variant="fade-up" delay={100}>
-            <MiniCard
-              icon={Droplets}
+            <PhotoCard
+              img="/images/projects/blood-donation-camp.jpg"
               title="Blood Donation Camps"
-              desc="Organized blood donation events partnering with district hospitals and medical partners to ensure reliable, safe blood supply."
+              desc="Community blood donation events partnering with district hospitals for reliable, safe blood supply."
               link="/projects/brij-sangini"
+              badge="Health"
             />
           </Reveal>
         </div>
@@ -260,27 +322,30 @@ const ProjectsPage = () => {
           />
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <Reveal variant="fade-up">
-              <MiniCard
-                icon={Leaf}
+              <PhotoCard
+                img="/images/projects/brij-seva-plantation.jpg"
                 title="Plantation Drives"
-                desc="Community-led tree planting and green initiatives for environmental conservation across the Braj region."
+                desc="Community-led tree planting and green initiatives across the Braj region."
                 link="/projects/brij-seva"
+                badge="Green"
               />
             </Reveal>
             <Reveal variant="fade-up" delay={100}>
-              <MiniCard
-                icon={Flower2}
+              <PhotoCard
+                img="/images/projects/brij-surabhi-flower-recycling.jpg"
                 title="Waste Flower Management"
-                desc="Transforming temple floral offerings into sustainable luxury products — incense, perfumes, and handmade paper."
+                desc="Transforming temple floral offerings into incense, perfumes, and handmade paper."
                 link="/projects/brij-surabhi-temple-waste"
+                badge="Eco"
               />
             </Reveal>
             <Reveal variant="fade-up" delay={200}>
-              <MiniCard
-                icon={TreePine}
+              <PhotoCard
+                img="/images/projects/brij-surabhi-cow-craft.jpg"
                 title="Panchgavya Initiatives"
-                desc="Transforming cow waste into eco-friendly Panchagavya commodities — blending animal welfare with rural empowerment."
+                desc="Eco-friendly Panchagavya commodities — blending animal welfare with rural empowerment."
                 link="/projects/brij-surabhi-cow-welfare"
+                badge="Sustainable"
               />
             </Reveal>
           </div>
@@ -297,19 +362,21 @@ const ProjectsPage = () => {
         />
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Reveal variant="fade-up">
-            <MiniCard
-              icon={Flower2}
+            <PhotoCard
+              img="/images/projects/royal-sanjhi-training.jpg"
               title="Sanjhi Art Promotion"
-              desc="Reviving the royal heritage of Brij stencil art through specialized MSME training in fashion, apparel, and interior design."
+              desc="Reviving royal heritage of Brij stencil art through MSME training in fashion, apparel, and interior design."
               link="/projects/royal-sanjhi"
+              badge="Art"
             />
           </Reveal>
           <Reveal variant="fade-up" delay={100}>
-            <MiniCard
-              icon={Award}
+            <PhotoCard
+              img="/images/projects/poshak-sanjhi.jpg"
               title="Mathura Zari Poshak (GI) Promotion"
-              desc="Preserving the sacred art of deity garment making through artisan training — World Bank aided UP Pro-Poor Tourism project."
+              desc="Preserving the sacred art of deity garment making through artisan training — World Bank aided project."
               link="/projects/radha-krishna-poshak"
+              badge="Heritage"
             />
           </Reveal>
         </div>
@@ -326,19 +393,21 @@ const ProjectsPage = () => {
           />
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Reveal variant="fade-up">
-              <MiniCard
-                icon={HandHeart}
+              <PhotoCard
+                img="/images/projects/daan-utsav.jpg"
                 title="Daan Utsav"
                 desc="Blanket and essential distribution during Makar Sankranti — serving the most vulnerable communities."
                 link="/projects/brij-seva"
+                badge="Seva"
               />
             </Reveal>
             <Reveal variant="fade-up" delay={100}>
-              <MiniCard
-                icon={Droplets}
+              <PhotoCard
+                img="/images/projects/brij-seva-jal.jpg"
                 title="Jal Seva Campaign"
-                desc="Running continuously for 5 years — distributing drinking water, sharbat, and buttermilk for travelers during summer."
+                desc="Running continuously for 5 years — drinking water, sharbat, and buttermilk for travelers during summer."
                 link="/projects/brij-seva"
+                badge="5 Years"
               />
             </Reveal>
           </div>
@@ -353,12 +422,22 @@ const ProjectsPage = () => {
           title="Institutional Programs"
         />
         <Reveal variant="fade-up">
-          <MiniCard
-            icon={Building2}
-            title="Skill Training for Women Inmates – District Jail Mathura"
-            desc="Brij-Anshuman: Vocational skill training for women inmates, supporting rehabilitation and livelihood opportunities after release. Regular training batches conducted."
-            link="/projects/brij-anshuman"
-          />
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-xl">
+              <img src="/images/projects/brij-anshuman-icon.jpg" alt="Brij Anshuman" className="w-full h-full object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+              <div className="absolute bottom-6 left-6 right-6">
+                <span className="text-accent text-xs font-bold tracking-widest uppercase">Rehabilitation</span>
+                <h3 className="text-primary-foreground text-xl font-display font-bold mt-1">Brij-Anshuman</h3>
+              </div>
+            </div>
+            <MiniCard
+              icon={Building2}
+              title="Skill Training for Women Inmates – District Jail Mathura"
+              desc="Brij-Anshuman: Vocational skill training for women inmates, supporting rehabilitation and livelihood opportunities after release. Regular training batches conducted."
+              link="/projects/brij-anshuman"
+            />
+          </div>
         </Reveal>
       </section>
 
