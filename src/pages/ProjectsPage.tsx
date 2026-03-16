@@ -182,11 +182,9 @@ const ProjectsPage = () => {
         />
         {/* Image strip */}
         <Reveal variant="fade-up" className="mb-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-            <PhotoCard img="/images/projects/brij-hunar-beauty.jpg" title="Beauty Therapy" desc="Professional beauty & salon training" link="/projects/brij-hunar" />
-            <PhotoCard img="/images/projects/brij-hunar-tailoring.jpg" title="Tailoring Program" desc="Self-employment through stitching" link="/projects/brij-hunar" />
-            <PhotoCard img="/images/projects/upsdm-beauty.jpg" title="UPSDM Beauty" desc="Government-certified courses" link="/projects/upsdm-training" />
-            <PhotoCard img="/images/projects/upsdm-tailor.jpg" title="UPSDM Tailoring" desc="Certified tailor training" link="/projects/upsdm-training" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <PhotoCard img="/images/projects/upsdm-beauty.jpg" title="Beauty Therapy" desc="Professional beauty & salon training" link="/projects/brij-hunar" />
+            <PhotoCard img="/images/projects/upsdm-tailor.jpg" title="Tailoring Program" desc="Self-employment through stitching" link="/projects/brij-hunar" />
           </div>
         </Reveal>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -363,7 +361,7 @@ const ProjectsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Reveal variant="fade-up">
             <PhotoCard
-              img="/images/projects/royal-sanjhi-training.jpg"
+              img="/images/projects/poshak-sanjhi.jpg"
               title="Sanjhi Art Promotion"
               desc="Reviving royal heritage of Brij stencil art through MSME training in fashion, apparel, and interior design."
               link="/projects/royal-sanjhi"
@@ -372,7 +370,7 @@ const ProjectsPage = () => {
           </Reveal>
           <Reveal variant="fade-up" delay={100}>
             <PhotoCard
-              img="/images/projects/poshak-sanjhi.jpg"
+              img="/images/projects/brij-hunar-tailoring.jpg"
               title="Mathura Zari Poshak (GI) Promotion"
               desc="Preserving the sacred art of deity garment making through artisan training — World Bank aided project."
               link="/projects/radha-krishna-poshak"
