@@ -361,7 +361,7 @@ const ProjectsPage = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <Reveal variant="fade-up">
             <PhotoCard
-              img="/images/projects/royal-sanjhi-training.jpg"
+              img="/images/projects/poshak-sanjhi.jpg"
               title="Sanjhi Art Promotion"
               desc="Reviving royal heritage of Brij stencil art through MSME training in fashion, apparel, and interior design."
               link="/projects/royal-sanjhi"
@@ -370,7 +370,7 @@ const ProjectsPage = () => {
           </Reveal>
           <Reveal variant="fade-up" delay={100}>
             <PhotoCard
-              img="/images/projects/poshak-sanjhi.jpg"
+              img="/images/projects/brij-hunar-tailoring.jpg"
               title="Mathura Zari Poshak (GI) Promotion"
               desc="Preserving the sacred art of deity garment making through artisan training — World Bank aided project."
               link="/projects/radha-krishna-poshak"
